@@ -25,7 +25,28 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-external="slides/slide_00/index.html"></section>
-				<section>Slide 2</section>
+				<section data-markdown>
+				  <script type="text/template">
+				    ## 大纲
+				    - 什么是 G2?
+				    - XXXX
+				    - XXXX
+				  </script>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>什么是 G2？</h2>
+					</section>
+					<section>
+						<h2>The Grammar of Graphics</h2>
+						<p>图形语法</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -37,12 +58,19 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
 				dependencies: [
 				  { src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 		</script>
