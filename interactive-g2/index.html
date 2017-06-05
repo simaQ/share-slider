@@ -24,35 +24,71 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-external="slides/slide_00/index.html"></section>
-				<section data-markdown>
-				  <script type="text/template">
-				    ## 大纲
-				    - 什么是 G2?
-				    - XXXX
-				    - XXXX
-				  </script>
-				</section>
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>什么是 G2？</h2>
-					</section>
-					<section>
-						<h2>The Grammar of Graphics</h2>
-						<p>图形语法</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-					</section>
-				</section>
+			<section id="before-starting" data-markdown>
+		    <script type="text/template">
+		    # 高交互的图表语言
+		    ---
+		    AIUX - 再飞
+		    </script>
+		  </section>
+		  <section data-markdown>
+				<script type="text/template">
+				## 大纲
+				- G2 简介
+				- G2 2.x 一套完整的图形语法
+				- G2 3.x 数据驱动的高交互图形语法
+				</script>
+		  </section>
+			<section>
+			  <h2>G2 简介</h2>
+			</section>
+			<section data-external="slides/slide_01/index.html"></section>
+			<section data-external="slides/slide_02/index.html"></section>
+			<section data-external="slides/slide_02/visualize-code.html"></section>
+			<section data-external="slides/slide_02/what-is-chart.html"></section>
+			<section data-external="slides/slide_02/simple-chart.html"></section>
+			<section data-external="slides/slide_02/line-to-radar.html"></section>
+			<section data-external="slides/slide_03/compose.html"></section>
+			<section data-external="slides/slide_04/extend.html"></section>
+			<section data-external="slides/slide_05/index.html"></section>
+			<section data-external="slides/slide_05/brush.html"></section>
+			<section data-external="slides/slide_05/select.html"></section>
+			<section data-external="slides/slide_05/legend-filter.html"></section>
+			<section data-external="slides/slide_05/highlight.html"></section>
+<!--
+      // 2.x
+      加入了动画和支持了基本的交互，举例。
+
+      目前用户未图表添加交互的方式
+      困境？？？
+
+      // 3.x
+      高交互语法。引入状态量管理。
+      1. 简单介绍下响应式编程
+      2. 引入 G2 框架中，通过举两个例子。
+      3. G2 3.x 的目标，开发时间
+
+      // 联系方式、官网、二维码 -->
+
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/g2.js"></script>
+		<script src="js/reveal-to-g2.js"></script>
+		<script src="js/reveal-to-g2-config.js"></script>
 
+
+		<!-- In slides -->
+		<script src="slides/slide_02/simple-chart.js"></script>
+    <script src="slides/slide_02/line-to-radar.js"></script>
+    <script src="slides/slide_03/compose.js"></script>
+    <script src="slides/slide_05/brush.js"></script>
+		<script src="slides/slide_05/select.js"></script>
+		<script src="slides/slide_05/legend-filter.js"></script>
+		<script src="slides/slide_05/highlight.js"></script>
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
@@ -62,6 +98,7 @@
 				progress: true,
 				history: true,
 				center: true,
+				width: '100%',
 				transition: 'convex', // none/fade/slide/convex/concave/zoom
 				dependencies: [
 				  { src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },

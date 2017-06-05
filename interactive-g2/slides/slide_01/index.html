@@ -1,0 +1,119 @@
+<style>
+/*  #g2 {
+    top: -35px!important;
+  }*/
+  #g2 .page-centered {
+    max-width: 1000px;
+    min-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  #showcase {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  #showcase:before {
+    bottom: -16px;
+    /*box-shadow: 0px -8px 16px rgba(0,0,0,0.3);*/
+  }
+  #showcase:after, #showcase:before {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      background: white;
+      height: 16px;
+      z-index: 2;
+  }
+
+  #showcase .examples {
+    margin: 0 auto;
+    height: 300px;
+    width: 1440px;
+    line-height: 0;
+  }
+
+  #showcase .preview {
+    /*display: inline-block;*/
+    float: left;
+    width: 180px;
+    height: 100px;
+    padding: 0;
+    outline: 1px solid #ddd;
+    background-position: left top;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    transition: background-position 2s;
+    -webkit-transition: background-position 2s;
+}
+
+</style>
+<section id="g2">
+<div style="margin-top: -35px;">
+  <div class="page-centered title">
+  <h1 style="font-size: 1.5em;">
+    G2 – <span style="font-weight: 300;font-size: 0.8em;">The Grammar of Graphics</span>
+  </h1>
+</div>
+  <div id="showcase">
+    <div class="examples">
+      <a class="preview" href="examples/scatter-plot-null-values" style="background-image: url(&quot;/slides/images/arcDiagram.png&quot;);"></a>
+      <a class="preview" href="examples/radial-tree-layout" style="background-image: url(&quot;/slides/images/area-percent.png&quot;);"></a>
+      <a class="preview" href="examples/world-map" style="background-image: url(&quot;/slides/images/bar-negative.png&quot;);"></a>
+      <a class="preview" href="examples/histogram-null-values" style="background-image: url(&quot;/slides/images/cloud.png&quot;);"></a>
+      <a class="preview" href="examples/violin-plot" style="background-image: url(&quot;/slides/images/dashboard.gif&quot;);"></a>
+      <a class="preview" href="examples/parallel-coordinates" style="background-image: url(&quot;/slides/images/data-trend-with-polygon.png&quot;);"></a>
+      <a class="preview" href="examples/word-cloud" style="background-image: url(&quot;/slides/images/diverging-stacked-bar.png&quot;);"></a>
+      <a class="preview" href="examples/falkensee-population" style="background-image: url(&quot;/slides/images/heatmap-canvas.png&quot;);"></a>
+      <a class="preview" href="examples/barley-trellis-plot" style="background-image: url(&quot;/slides/images/k-chart-01.png&quot;);"></a>
+      <a class="preview" href="examples/connected-scatter-plot" style="background-image: url(&quot;/slides/images/line-kagi.png&quot;);"></a>
+      <a class="preview" href="examples/population-pyramid" style="background-image: url(&quot;/slides/images/line-of-dashed.png&quot;);"></a>
+      <a class="preview" href="examples/crossfilter-flights" style="background-image: url(&quot;/slides/images/pie.png&quot;);"></a>
+      <a class="preview" href="examples/beeswarm-plot" style="background-image: url(&quot;/slides/images/point-shape-animate.gif&quot;);"></a>
+      <a class="preview" href="examples/weekly-temperature" style="background-image: url(&quot;/slides/images/polar-heatmap.png&quot;);"></a>
+      <a class="preview" href="examples/job-voyager" style="background-image: url(&quot;/slides/images/rose-01.png&quot;);"></a>
+      <a class="preview" href="examples/interactive-legend" style="background-image: url(&quot;/slides/images/sankey.png&quot;);"></a>
+      <a class="preview" href="examples/brushing-scatter-plots" style="background-image: url(&quot;/slides/images/scatter-c.png&quot;);"></a>
+      <a class="preview" href="examples/distortion-comparison" style="background-image: url(&quot;/slides/images/scatter-matrix.png&quot;);"></a>
+      <a class="preview" href="examples/county-unemployment" style="background-image: url(&quot;/slides/images/stacked-bar.png&quot;);"></a>
+      <a class="preview" href="examples/edge-bundling" style="background-image: url(&quot;/slides/images/test-case.png&quot;);"></a>
+      <a class="preview" href="examples/force-directed-layout" style="background-image: url(&quot;/slides/images/thermometer.png&quot;);"></a>
+      <a class="preview" href="examples/reorderable-matrix" style="background-image: url(&quot;/slides/images/tree-circle.png&quot;);"></a>
+      <a class="preview" href="examples/stock-index-chart" style="background-image: url(&quot;/slides/images/treemap.png&quot;);"></a>
+      <a class="preview" href="examples/airport-connections" style="background-image: url(&quot;/slides/images/world-map.png&quot;);"></a>
+
+
+      <a class="preview" href="examples/scatter-plot-null-values" style="background-image: url(&quot;/slides/images/1-animate-speeds.gif&quot;);"></a>
+      <a class="preview" href="examples/radial-tree-layout" style="background-image: url(&quot;/slides/images/1-column-bullet.png&quot;);"></a>
+      <a class="preview" href="examples/world-map" style="background-image: url(&quot;/slides/images/1-column-helix.png&quot;);"></a>
+      <a class="preview" href="examples/histogram-null-values" style="background-image: url(&quot;/slides/images/1-contour.png&quot;);"></a>
+      <a class="preview" href="examples/violin-plot" style="background-image: url(&quot;/slides/images/1-corona.png&quot;);"></a>
+      <a class="preview" href="examples/parallel-coordinates" style="background-image: url(&quot;/slides/images/1-department.png&quot;);"></a>
+      <a class="preview" href="examples/word-cloud" style="background-image: url(&quot;/slides/images/1-funnel-compare.png&quot;);"></a>
+      <a class="preview" href="examples/falkensee-population" style="background-image: url(&quot;/slides/images/1-histogram.png&quot;);"></a>
+      <a class="preview" href="examples/barley-trellis-plot" style="background-image: url(&quot;/slides/images/1-image-top-bar.png&quot;);"></a>
+      <a class="preview" href="examples/connected-scatter-plot" style="background-image: url(&quot;/slides/images/1-interval-of-marked.png&quot;);"></a>
+      <a class="preview" href="examples/population-pyramid" style="background-image: url(&quot;/slides/images/1-jitter.png&quot;);"></a>
+      <a class="preview" href="examples/crossfilter-flights" style="background-image: url(&quot;/slides/images/1-map-bubble.gif&quot;);"></a>
+      <a class="preview" href="examples/beeswarm-plot" style="background-image: url(&quot;/slides/images/1-path.png&quot;);"></a>
+      <a class="preview" href="examples/weekly-temperature" style="background-image: url(&quot;/slides/images/1-point-shape-animate.gif&quot;);"></a>
+      <a class="preview" href="examples/job-voyager" style="background-image: url(&quot;/slides/images/1-polar-slice-transpose.png&quot;);"></a>
+      <a class="preview" href="examples/interactive-legend" style="background-image: url(&quot;/slides/images/1-radar-line.png&quot;);"></a>
+      <a class="preview" href="examples/brushing-scatter-plots" style="background-image: url(&quot;/slides/images/1-radar-multiple.png&quot;);"></a>
+      <a class="preview" href="examples/distortion-comparison" style="background-image: url(&quot;/slides/images/1-radial-bar.png&quot;);"></a>
+      <a class="preview" href="examples/county-unemployment" style="background-image: url(&quot;/slides/images/1-tree-column.png&quot;);"></a>
+      <a class="preview" href="examples/edge-bundling" style="background-image: url(&quot;/slides/images/1-slice-pie.png&quot;);"></a>
+      <a class="preview" href="examples/force-directed-layout" style="background-image: url(&quot;/slides/images/1-stock-calendar.png&quot;);"></a>
+      <a class="preview" href="examples/reorderable-matrix" style="background-image: url(&quot;/slides/images/1-streamgraph.png&quot;);"></a>
+      <a class="preview" href="examples/stock-index-chart" style="background-image: url(&quot;/slides/images/1-sunburst-chart.png&quot;);"></a>
+      <a class="preview" href="examples/airport-connections" style="background-image: url(&quot;/slides/images/1-tree-column.png&quot;);"></a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,112 @@
+<style>
+  #compose table#data_table {
+    border-collapse:collapse;
+    border-spacing:0;
+    empty-cells:show;
+    border:1px solid #e9e9e9;
+    /*margin-bottom:24px;*/
+    font-size: 0.5em;
+  }
+  #compose table#data_table th {
+    background:#f7f7f7;
+  }
+  #compose table#data_table td, table#data_table th {
+    border:1px solid #e9e9e9;
+    padding:8px 16px;
+    text-align:left;
+  }
+  #compose table#data_table th {
+    white-space:nowrap;
+    color:#5c6b77;
+    font-weight:600;
+  }
+
+  #compose table#chart_table td {
+    padding: 0 !important;
+    vertical-align: middle !important;
+  }
+
+  #compose pre {
+    /*width: 110%;*/
+    font-size: 0.35em;
+  }
+  #compose pre code {
+    padding: 10px;
+    height: 130px;
+  }
+</style>
+<section id="compose">
+  <!-- 钻石数据展示 -->
+  <table class="table fragment fade-in " id="data_table" data-fragment-index="1" style="width: 50%!important">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>carat</th>
+          <th>cut</th>
+          <th>color</th>
+          <th>clarity</th>
+          <th>depth</th>
+          <th>table</th>
+          <th>price</th>
+          <th>x</th>
+          <th>y</th>
+          <th>z</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>14513</td>
+          <td>1.35</td>
+          <td>Ideal</td>
+          <td>J</td>
+          <td>VS2</td>
+          <td>61.4</td>
+          <td>57</td>
+          <td>5862</td>
+          <td>7.1</td>
+          <td>7.13</td>
+          <td>4.37</td>
+        </tr>
+        <tr>
+          <td>28685</td>
+          <td>0.3</td>
+          <td>Good</td>
+          <td>G</td>
+          <td>VVS1</td>
+          <td>64</td>
+          <td>57</td>
+          <td>678</td>
+          <td>4.23</td>
+          <td>4.27</td>
+          <td>2.72</td>
+        </tr>
+      </tbody>
+  </table>
+
+  <!-- 可视化演示 -->
+  <span class="fragment"></span>
+  <span class="fragment"></span>
+  <span class="fragment"></span>
+  <span class="fragment"></span>
+  <span class="fragment"></span>
+
+  <table id="chart_table" style="width: 100%;" class="fragment" data-fragment-index="2">
+    <tr>
+      <td style="width: 50%;height: 450px;">
+        <pre>
+          <code class="language-javascript" data-noescape data-trim>
+            chart.interval()
+              .position(Stat.summary.mean('cut*price'))
+              .color('cut');
+          </code>
+        </pre>
+      </td>
+
+      <td>
+        <div style="position: relative;">
+          <div id="diamond"></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
