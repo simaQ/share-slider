@@ -11,7 +11,7 @@ pt.brush.init = function() {
         forceFit: true,
         height: 400,
         plotCfg: {
-          margin: [20, 110, 80, 30]
+          margin: [20, 110, 80]
         }
       });
       chart.setMode('select'); // 开启框选模式
@@ -50,19 +50,35 @@ pt.brush.init = function() {
       });
       chart.line().position('date*value').color('city', ['#1f77b4', '#ff7f0e', '#2ca02c']).shape('spline').size(2);
       chart.render();
-    /*
-      // rangeselectend 框选结束，用户可通过返回值进行交互操作
-      chart.on('rangeselectend', function(ev) {
-        var selected = ev.selected; // 选中区间的 x 、y 两个维度对应的数据值范围
-        console.log(selected);
-      });
-    */
       // 监听双击事件，这里用于复原图表
       chart.on('plotdblclick', function(ev) {
         chart.get('options').filters = {};
         chart.repaint();
       });
       self.chart = chart;
+
+      $('#brushX').click(function() {
+        chart.setMode('select');
+        chart.select('rangeX');
+        chart.repaint();
+      });
+
+      $('#brushY').click(function() {
+        chart.setMode('select');
+        chart.select('rangeY');
+        chart.repaint();
+      });
+
+      $('#brushXY').click(function() {
+        chart.setMode('select');
+        chart.select('rangeXY');
+        chart.repaint();
+      });
+
+      $('#brushClosed').click(function() {
+        chart.setMode(false);
+        chart.repaint();
+      });
   });
 };
 

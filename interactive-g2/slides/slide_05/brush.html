@@ -1,5 +1,49 @@
+<style>
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  /*font-weight: 400;*/
+  line-height: 30px;
+  margin: 0 auto 2em;
+  max-width: 100px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+}
+.btn-3 {
+  background: rgba(36, 133, 254, .8);
+  border: 1px solid rgba(36, 133, 254, .8);
+  /*box-shadow: 0px 2px 0 #d6251f, 2px 4px 6px #e02a24;*/
+  /*font-weight: 900;*/
+  letter-spacing: 1px;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+}
+
+.btn-3:hover {
+  background: rgba(36, 133, 254, .8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+  /*color: #ec817d;*/
+  text-decoration: none;
+  /*text-shadow: -1px -1px 0 #c2211c;*/
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
+</style>
 <section id="brush">
-  <div style="width: 900px;margin: 0 auto;">
+  <div>
+    <button class="btn btn-3" id="brushX">X 轴框选</button>
+    <button class="btn btn-3" id="brushY">Y 轴框选</button>
+    <button class="btn btn-3" id="brushXY">XY 轴框选</button>
+    <button class="btn btn-3" id="brushClosed">关闭框选</button>
+  </div>
+  <div style="width: 900px;height:400px;margin: 0 auto;">
     <div id="lineChart"></div>
   </div>
 </section>

@@ -58,6 +58,7 @@ pt.slideIdToFunctions = {
   'legend-filter': {
     'init': function() {
       pt.legendFilter.init();
+      pt.conLegendFilter.init();
     }
   },
   'select': {
@@ -65,6 +66,11 @@ pt.slideIdToFunctions = {
       pt.select.init();
     }
   },
+  'chart-communication': {
+    'init': function() {
+      pt.chartCommunication.init();
+    }
+  }
 };
 
 function destroyChart() {
@@ -72,4 +78,9 @@ function destroyChart() {
   pt.lineToRadar.destroy();
   pt.compose.destroy();
   pt.brush.destroy();
+  pt.highlight.destroy();
+  pt.select.destroy();
+  pt.legendFilter.destroy();
+  pt.conLegendFilter.destroy();
+  pt.chartCommunication.destroy();
 }
