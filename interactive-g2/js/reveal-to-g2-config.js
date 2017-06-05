@@ -71,4 +71,5 @@ function destroyChart() {
   pt.scatter.destroy();
   pt.lineToRadar.destroy();
   pt.compose.destroy();
+  pt.brush.destroy();
 }
