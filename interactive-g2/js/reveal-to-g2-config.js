@@ -71,11 +71,11 @@ pt.slideIdToFunctions = {
       pt.chartCommunication.init();
     }
   },
-  'example': {
-    'init': function() {
-      pt.example.init();
-    }
-  }
+  // 'example': {
+  //   'init': function() {
+  //     pt.example.init();
+  //   }
+  // }
 };
 
 function destroyChart() {
@@ -88,5 +88,5 @@ function destroyChart() {
   pt.legendFilter.destroy();
   pt.conLegendFilter.destroy();
   pt.chartCommunication.destroy();
-  pt.example.destroy();
+  // pt.example.destroy();
 }
