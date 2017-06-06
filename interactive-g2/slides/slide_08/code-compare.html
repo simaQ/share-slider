@@ -1,0 +1,72 @@
+<style>
+  #code-compare pre {
+    /*width: 110%;*/
+    font-size: 0.35em;
+  }
+  #code-compare pre code {
+    padding: 10px;
+    height: 800px!important;
+  }
+</style>
+<section id="code-compare">
+  <table style="width: 100%;">
+    <tr>
+      <td style="width: 50%;">
+        <h3 style="text-align: center;font-weight: 300;color: #f80;">2.x</h3>
+        <pre>
+          <code class="language-javascript" data-noescape data-trim>
+            var isMainShow = true; // 增加标志位，判定处于哪个视图
+            chart.on('plotclick', function(ev) {
+              // 判定是否点击了
+              if(isMainShow && ev.shape) {
+                var gender = ev.data.gender;
+                var data = arr.filter(function(obj) {
+                  return obj.gender === gender;
+                });
+                view2.changeData(data);
+                chart.repaint();
+              }
+            });
+            chart.on('plotdbclick',function(ev) {
+              if (!isMainShow) {
+                chart.repaint();
+              }
+            });
+          </code>
+        </pre>
+      </td>
+
+      <td>
+        <h3 style="text-align: center;font-weight: 300;color: #f80;">3.x</h3>
+        <pre>
+          <code class="language-javascript" data-noescape data-trim>
+            var dataSet = new DataSet({
+              currentGender: null
+            });
+            dataSet.view('data').source(arr);
+            dataSet.view('detail-data').from('data')
+              .transform({
+                type: 'filter',
+                fn: function (obj) {
+                  return obj.gender === this.state.currentGender
+                }
+              })
+
+            view1.source(dataSet.view('main-data');
+            view1.on('interval:click', function(evt) {
+              chart.hide(this)
+              dataSet.setState({
+                currentGender: evt.data.gender
+              })
+            })
+            view2.source('dataset2')
+            view2.on('interval:dblclick', () => {
+              chart.hide(this)
+              chart.show(view1)
+            })
+          </code>
+        </pre>
+      </td>
+    </tr>
+  </table>
+</section>

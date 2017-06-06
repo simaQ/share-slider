@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="501px" height="38px" viewBox="0 0 501 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-105.759395%" y1="49.8364328%" x2="109.906533%" y2="50.2094894%" id="linearGradient-1">
+            <stop stop-color="#8AFFFC" offset="0%"></stop>
+            <stop stop-color="#24BFBA" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="122.699419%" y1="49.6334644%" x2="11.1961255%" y2="50.3822203%" id="linearGradient-2">
+            <stop stop-color="#5CF5F1" offset="0%"></stop>
+            <stop stop-color="#38DAD4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="127.782812%" y1="-31.4278594%" x2="-3.57373208%" y2="157.448387%" id="linearGradient-3">
+            <stop stop-color="#25C3BF" offset="0%"></stop>
+            <stop stop-color="#7AFCF9" offset="70.0585004%"></stop>
+            <stop stop-color="#7BFCF9" offset="100%"></stop>
+            <stop stop-color="#7DFDFA" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="105.968293%" y1="48.3945735%" x2="6.65511846%" y2="51.3194939%" id="linearGradient-4">
+            <stop stop-color="#8CFFFC" offset="0%"></stop>
+            <stop stop-color="#3EE7E3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <g id="g2-logo">
+                <g id="Group">
+                    <g id="Page-1">
+                        <g id="Group">
+                            <g id="g2-logo">
+                                <rect id="Rectangle-1" fill="url(#linearGradient-1)" transform="translate(12.147225, 12.147226) rotate(45.000000) translate(-12.147225, -12.147226) " x="8.37627525" y="-1.26059563" width="7.54189944" height="26.8156425"></rect>
+                                <rect id="Rectangle-1-Copy" fill="url(#linearGradient-2)" transform="translate(12.147225, 25.772922) rotate(135.000000) translate(-12.147225, -25.772922) " x="8.37627516" y="12.3651012" width="7.54189944" height="26.8156425"></rect>
+                                <rect id="Rectangle-1-Copy-2" fill="url(#linearGradient-3)" transform="translate(22.092705, 18.372032) rotate(225.000000) translate(-22.092705, -18.372032) " x="18.3217557" y="14.6010823" width="7.54189944" height="7.54189944"></rect>
+                                <rect id="Rectangle-1-Copy-4" fill="url(#linearGradient-4)" transform="translate(20.305494, 25.250051) rotate(45.000000) translate(-20.305494, -25.250051) " x="16.5345441" y="15.354806" width="7.54189944" height="19.7904907"></rect>
+                            </g>
+                            <g id="G2" transform="translate(42.000000, 5.000000)" font-size="24" font-family="Helvetica-Bold, Helvetica" fill="#50ECE7" font-weight="bold">
+                                <text id="G2-3.0">
+                                    <tspan x="0" y="23">G2 </tspan>
+                                    <tspan x="38.6835938" y="23">3.0</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <text id="数据驱动、高交互、基于图形语法的可视化引" font-family="PingFangSC-Semibold, PingFang SC" font-size="18" font-weight="500" fill="#000000">
+                <tspan x="123" y="25">数据驱动、高交互、基于图形语法的可视化引擎</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

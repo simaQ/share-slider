@@ -1,6 +1,58 @@
-<section data-markdown>
-  <script type="text/template">
-    ## 目前的实现方式
-    ## 困境
-  </script>
+<style>
+  #current-situation pre {
+    /*width: 110%;*/
+    font-size: 0.35em;
+  }
+  #current-situation pre code {
+    padding: 10px;
+    height: 600px;
+  }
+</style>
+<section id="current-situation">
+  <table style="width: 100%;">
+    <tr>
+      <td style="width: 50%;">
+        <h3 style="text-align: center;font-weight: 300;border-bottom: 1px solid #f80;">注册事件 + callback</h3>
+        <pre>
+          <code class="language-javascript" data-noescape data-trim>
+            scatterChart.on('plotclick', (ev) => {
+              var clickedShape = ev.shape;
+              if (clickedShape) {
+                if (clickedShape.get('selected')) {
+                  isSelected = false;
+                  clickedShape.set('selected', false);
+                  scatterActiveGroup.clear();
+                  barActiveGroup.clear();
+                  barCanvas.draw();
+                } else {
+                  isSelected = true;
+                  clickedShape.set('selected', true);
+                  last && last.set('selected', false);
+
+                  scatterActiveGroup.clear();
+                  last = clickedShape;
+                  var activeBar = getShapeByData(barChart, '客户名称', clickedShape);
+                  setHighlight(barChart, activeBar, barActiveGroup);
+                  setHighlight(scatterChart, clickedShape, scatterActiveGroup);
+                  barCanvas.sort();
+                  barCanvas.draw();
+                }
+              }
+
+              ...
+            });
+          </code>
+        </pre>
+      </td>
+
+      <td>
+        <h3 style="text-align: center;font-weight: 300;border-bottom: 1px solid #f80;">The trouble is:</h3>
+        <ul style="margin: 100px auto;width: 90%;padding:10px 80px;">
+          <li>需要手动维持状态</li>
+          <li>需要重新定义视觉样式</li>
+          <li>逻辑复杂，交错执行</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 </section>
