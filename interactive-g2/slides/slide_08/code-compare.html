@@ -1,11 +1,13 @@
 <style>
+  #code-compare {
+    top: 0!important;
+  }
   #code-compare pre {
     /*width: 110%;*/
     font-size: 0.35em;
   }
   #code-compare pre code {
     padding: 10px;
-    height: 800px!important;
   }
 </style>
 <section id="code-compare">
@@ -15,21 +17,27 @@
         <h3 style="text-align: center;font-weight: 300;color: #f80;">2.x</h3>
         <pre>
           <code class="language-javascript" data-noescape data-trim>
-            var isMainShow = true; // 增加标志位，判定处于哪个视图
+            var isMainShow = true;
+
             chart.on('plotclick', function(ev) {
-              // 判定是否点击了
               if(isMainShow && ev.shape) {
-                var gender = ev.data.gender;
-                var data = arr.filter(function(obj) {
+                var gender = ev.data._origin.gender;
+                var filteredData = arr.filter(function(obj) {
                   return obj.gender === gender;
                 });
-                view2.changeData(data);
+                view1.hide();
+                view2.show();
                 chart.repaint();
+                isMainShow = false;
               }
             });
-            chart.on('plotdbclick',function(ev) {
-              if (!isMainShow) {
+
+            chart.on('plotdblclick',function(ev) {
+              if (!isMainShow && view2) {
+                view2.hide();
+                view1.show();
                 chart.repaint();
+                isMainShow = true;
               }
             });
           </code>
@@ -44,26 +52,26 @@
               currentGender: null
             });
             dataSet.view('data').source(arr);
-            dataSet.view('detail-data').from('data')
+            dataSet.view('view2-data').from('data')
               .transform({
                 type: 'filter',
                 fn: function (obj) {
-                  return obj.gender === this.state.currentGender
+                  return obj.gender === this.state.currentGender;
                 }
               })
 
-            view1.source(dataSet.view('main-data');
-            view1.on('interval:click', function(evt) {
-              chart.hide(this)
+            view1.source(dataSet.view('view1-data');
+            view1.on('interval:click', function(ev) {
+              chart.hide(this);
               dataSet.setState({
                 currentGender: evt.data.gender
-              })
+              });
             })
-            view2.source('dataset2')
+            view2.source('view2-data');
             view2.on('interval:dblclick', () => {
-              chart.hide(this)
-              chart.show(view1)
-            })
+              chart.hide(this);
+              chart.show(view1);
+            });
           </code>
         </pre>
       </td>

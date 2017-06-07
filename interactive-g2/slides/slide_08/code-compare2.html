@@ -1,37 +1,40 @@
 <style>
-  #code-compare pre {
+  #code-compare-2 pre {
     /*width: 110%;*/
     font-size: 0.35em;
   }
-  #code-compare pre code {
+  #code-compare-2 pre code {
     padding: 10px;
-    height: 800px!important;
   }
 </style>
-<section id="code-compare">
+<section id="code-compare-2">
+  <h3>数据筛选</h3>
   <table style="width: 100%;">
     <tr>
       <td style="width: 50%;">
         <h3 style="text-align: center;font-weight: 300;color: #f80;">2.x</h3>
         <pre>
           <code class="language-javascript" data-noescape data-trim>
-            var isMainShow = true; // 增加标志位，判定处于哪个视图
-            chart.on('plotclick', function(ev) {
-              // 判定是否点击了
-              if(isMainShow && ev.shape) {
-                var gender = ev.data.gender;
-                var data = arr.filter(function(obj) {
-                  return obj.gender === gender;
-                });
-                view2.changeData(data);
-                chart.repaint();
-              }
+            var data = [
+              {x: 1, y: 1},
+              {x: 2, y: 3}
+            ];
+
+            // 初始过滤处理
+            data = data.filter(function(obj) {
+              return obj.y < 2;
             });
-            chart.on('plotdbclick',function(ev) {
-              if (!isMainShow) {
-                chart.repaint();
-              }
+            var chart = new G2.Chart();
+            chart.source(data);
+            chart.point().position('x*y');
+            chart.render();
+
+            // 更改过滤规则
+            data = data.filter(function(obj) {
+              return obj.y < 10;
             });
+
+            chart.changeData(data);
           </code>
         </pre>
       </td>
@@ -40,30 +43,26 @@
         <h3 style="text-align: center;font-weight: 300;color: #f80;">3.x</h3>
         <pre>
           <code class="language-javascript" data-noescape data-trim>
+            var data = [
+              {x: 1, y: 1},
+              {x: 2, y: 3}
+            ];
             var dataSet = new DataSet({
-              currentGender: null
+              state: {yValue: 2}
             });
-            dataSet.view('data').source(arr);
-            dataSet.view('detail-data').from('data')
+            dataSet.view('v-data').source(data)
               .transform({
-                type: 'filter',
-                fn: function (obj) {
-                  return obj.gender === this.state.currentGender
+                type: 'fitler',
+                fn: function(obj) {
+                  return obj.y >= this.state.yValue;
                 }
-              })
+              });
+            chart.source(dataSet.view('v-data'));
+            chart.point().position('x*y');
+            chart.render();
 
-            view1.source(dataSet.view('main-data');
-            view1.on('interval:click', function(evt) {
-              chart.hide(this)
-              dataSet.setState({
-                currentGender: evt.data.gender
-              })
-            })
-            view2.source('dataset2')
-            view2.on('interval:dblclick', () => {
-              chart.hide(this)
-              chart.show(view1)
-            })
+            // 更改过滤规则
+            dataSet.setState('yValue', 10);
           </code>
         </pre>
       </td>
