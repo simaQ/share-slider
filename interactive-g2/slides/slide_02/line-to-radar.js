@@ -9,7 +9,11 @@ pt.lineToRadar.init = function() {
       margin: [60, 80, 30]
     }
   });
-  chart.source([]);
+  chart.source([], {
+    // axis: {
+    //   range: [0, 1]
+    // }
+  });
   chart.axis('value', {
     formatter: function(val) {
       return val * 100 + '%';
@@ -117,6 +121,9 @@ pt.lineToRadar.toPolar = function() {
   var chart = this.chart;
   if (chart) {
     chart.coord('polar');
+    // chart.col('axis', {
+    //   range: [0.0625, 0.9375]
+    // });
     chart.repaint();
     pt.lineToRadar.updateCode(
       "<br>" +
