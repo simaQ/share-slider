@@ -18,7 +18,7 @@ pt.example.init = function() {
   ];
   var chart = new G2.Chart({
     id: 'exampleChart',
-    width: 700,
+    width: 900,
     height: 450,
     plotCfg: {
       margin: [80, 80, 80, 100]
@@ -30,7 +30,9 @@ pt.example.init = function() {
 
   var view1 = chart.createView();
   view1.source(arr);
-  view1.intervalDodge().position(G2.Stat.summary.mean('gender*salary')).color('jobCat');
+  view1.intervalDodge().position(G2.Stat.summary.mean('gender*salary')).color('jobCat').label('salary', {
+    offset: 20
+  });
   chart.render();
 
   var isMainShow = true;
@@ -39,7 +41,9 @@ pt.example.init = function() {
   function drawChartByGender(data, gender) {
     view2 = chart.createView();
     view2.source(data);
-    view2.interval().position(G2.Stat.summary.mean('jobCat*salary')).color('jobCat');
+    view2.interval().position(G2.Stat.summary.mean('jobCat*salary')).color('jobCat').label('salary', {
+    offset: 20
+  });
     view2.guide().text([-0.45, 'max'], G2.Util.ucfirst(gender), {
       fontSize: 30,
       fill: '#f80',
