@@ -1,0 +1,102 @@
+<style>
+  section#slide4 {
+    margin-top: -40px;
+  }
+  div.gif-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    height: 400px;
+  }
+  img {
+    background: transparent!important;
+    border: none!important;
+    box-shadow: none!important;
+    margin: 0!important;
+  }
+  div.gif-container img {
+    display: inline-block;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    position: relative;
+    left: -142px;
+    top: 20px;
+  }
+  div.image-overview {
+    margin: 0 auto;
+    width: 1068px;
+    height: 400px;
+    background-image: url(https://gw.alipayobjects.com/zos/rmsportal/gkPeTszgnJKUPXNbtvBs.jpg);
+    background-size: 100%;
+  }
+  div.chart-content {
+    position: relative;
+    margin: 0 auto;
+    width: 1068px;
+    height: 400px;
+    background-color: #fff;
+  }
+  div.charts {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    width: 770px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0;
+  }
+  div.charts div.chart-container {
+    background-color: #1a1a1a;
+    border-radius: 30px;
+    height: 260px;
+  }
+  div.chart-title {
+    font-size: 14px!important;
+    text-align: right;
+    padding: 15px 26px;
+  }
+  div.chart-main {
+    margin-top: 10px;
+  }
+</style>
+
+<section id="slide_04" data-background-color="#1A1A1A">
+  <div class="main">
+    <div class="image-overview"></div>
+    <div class="chart-content">
+      <div class="gif-container">
+        <img src="https://gw.alipayobjects.com/zos/rmsportal/UflmkAeCdDvJtDbCxuda.gif" alt="">
+      </div>
+      <div class="charts">
+        <div class="chart-container">
+          <div class="chart-title">
+            10:35pm
+          </div>
+          <div class="chart-main">
+            <canvas id="watchBar" style="width: 227px;height: 100px;"></canvas>
+            <div>
+              <p style="margin: 0;font-size: 12px;color: #CE78A6;">TOTAL STEPS</p>
+              <p style="margin: 0;font-size: 32px;">13,992</p>
+            </div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="watchRadial" style="width: 227px;height: 260px;"></canvas>
+        </div>
+        <div class="chart-container">
+          <div class="chart-title">
+            <span class="pull-left">Activity</span>
+            <span class="pull-right">06:10</span>
+          </div>
+          <div class="chart-main">
+            <canvas id="watchLine" style="width: 227px;height: 200px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

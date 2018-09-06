@@ -1,0 +1,338 @@
+<style>
+@font-face {
+  font-family: 'iconfont';  /* project id 822144 */
+  src: url('//at.alicdn.com/t/font_822144_c9tzymewee4.eot');
+  src: url('//at.alicdn.com/t/font_822144_c9tzymewee4.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_822144_c9tzymewee4.woff') format('woff'),
+  url('//at.alicdn.com/t/font_822144_c9tzymewee4.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_822144_c9tzymewee4.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-1112daochashao:before { content: "\ec2e"; }
+.icon-salary:before { content: "\e653"; }
+.icon-flight:before { content: "\e6ad"; }
+.icon-qiandai3:before { content: "\e613"; }
+.icon-calendar:before { content: "\e7b0"; }
+.icon-alarm:before { content: "\e60a"; }
+.icon-houtui:before { content: "\e607"; }
+.icon-menu:before { content: "\e671"; }
+
+#slide_02 .mobile-wrapper {
+  pointer-events: auto;
+  position: relative;
+  width: 375px;
+  height: 667px;
+  margin: 0 auto!important;
+  background-color: #283151;
+  border-radius: 0;
+  overflow: hidden;
+}
+#slide_02 .mobile-wrapper .content {
+  height: 647px;
+}
+#slide_02 .mobile-wrapper .mobile-header {
+  clear: both;
+  overflow: hidden;
+  /* padding: 15px; */
+  position: relative;
+  /* font-size: 20px; */
+  /* margin-bottom: 20px; */
+}
+#slide_02 .menu {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#slide_02 .mobile-wrapper .status-bar {
+  height: 30px;
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/ktiXGQxPkDtKHdajdFoE.png);
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.axis {
+  position: absolute;
+  color: #555D79;
+  z-index: 1;
+  text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  bottom: 16px;
+}
+
+.axis .tick {
+  flex: 1;
+  position: relative;
+  font-size: 16px;
+  text-align: center;
+  padding: 0;
+  line-height: 16px;
+}
+
+.axis .tick .value {
+  transform: translateY(-80vw);
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  top: 6.666666666666667vw;
+  left: 0;
+  color: #fff;
+  border-radius: 0.6666666666666666vw;
+  width: 100%;
+  line-height: 6.666666666666667vw;
+}
+
+.axis .tick:hover .value.value--this {
+  transform: translateY(-75vw);
+  display: block;
+  opacity: 0.4;
+}
+
+.axis .tick:focus .value.value--this {
+  transform: translateY(-75vw);
+  display: block;
+  opacity: 0.4;
+}
+
+.axis .tick:active .value.value--this {
+  transform: translateY(-75vw);
+  display: block;
+  opacity: 0.4;
+}
+
+.value.value--this {
+  color: #fff;
+  font-weight: bold;
+}
+
+.day-number {
+  display: block;
+}
+
+.day-name {
+  display: block;
+  opacity: 0.4;
+}
+@keyframes lighter {
+  0% {color: #555D79;}
+  100% {color: #fff;}
+}
+div.card {
+  margin: 15px;
+  padding: 10px 10px 13px 50px;
+  border-radius: 8px;
+  background-color: #343F63;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+div.card-list, div.small-card-list {
+  clear: both;
+  /* height: 35px; */
+  line-height: 1.4;
+  position: relative;
+}
+div.card-list {
+  height: 18px;
+}
+div.small-card-list {
+  height: 12px;
+}
+div.card-list span {
+  font-size: 18px;
+}
+div.small-card-list span {
+  font-size: 12px;
+  color: #9AA0B2
+}
+div.card-list img, div.small-card-list img {
+  position: absolute;
+  width: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  left: -40px;
+  top: -10px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+div.auxiliary-font {
+  font-size: 12px;
+  opacity: 0.65;
+  font-weight: 300;
+  text-align: left;
+}
+
+div.border-font {
+  display: inline-block;
+  width: auto;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 2px;
+  line-height: 14px;
+  padding: 0 2px;
+}
+
+div.main-font {
+  font-size: 27px;
+  text-align: left;
+}
+
+div.flex {
+  display: flex;
+}
+
+div.status-container {
+  position: relative;
+  height: 120px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  color: #fff;
+  background-image: linear-gradient(-132deg, #935EFF 0%, #6C57FF 64%, #625EFF 100%);
+  margin: 15px;
+  border-radius: 8px;
+}
+
+</style>
+<section id="slide_02" data-background-color="#8e8baf">
+  <div class="mobile-wrapper" style="margin-top: -50px;left: -187.5px;z-index: 10;">
+    <div class="mobile-header">
+      <div class="status-bar"></div>
+      <div class="menu">
+        <div><i class="iconfont icon-houtui" style="font-size: 24px;color:#fff;font-weight: bold;"></i></div>
+        <div><i class="iconfont icon-alarm" style="font-size: 24px;color:#fff;font-weight: bold;"></i></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="demo f2" style="position: relative;">
+        <div style="padding: 30px 15px 0;">
+          <p style="margin: 0;font-size: 16px;text-align: left;color:#9AA0B2;">Total Money</p>
+          <div>
+            <div id="money" class="pull-left" style="width:45%;text-align: left;color: #fff;font-size: 32px;">$0</div>
+            <div  class="pull-left" style="width:40%;;text-align: left;color: #C5F76F;font-size: 16px;line-height: 3;">+3.08</div>
+          </div>
+        </div>
+        <canvas id="chart2" style="width: 100%;height: 250px;"></canvas>
+        <div class="axis">
+          <div class="tick" ontouchstart="">
+            <span class="day-number">01</span>
+          </div>
+          <div class="tick" ontouchstart="">
+            <span class="day-number">02</span>
+          </div>
+          <div class="tick" ontouchstart="">
+            <span class="day-number">03</span>
+          </div>
+          <div class="tick" ontouchstart="">
+            <span class="day-number" id="highlight">04</span>
+          </div>
+          <div class="tick" ontouchstart="">
+            <span class="day-number">05</span>
+          </div>
+          <div class="tick" ontouchstart="">
+            <span class="day-number">06</span>
+          </div>
+          <div class="tick" ontouchstart="">
+            <span class="day-number">07</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-list">
+          <img src="https://gw.alipayobjects.com/zos/rmsportal/qYzfZAzKSwtSmyEXwXfF.png" alt="">
+          <span class="pull-left" style="color: #fff;">Buy Record</span>
+          <span class="pull-right" style="color: #C5F76F;">+8,888.00</span>
+        </div>
+        <div class="small-card-list">
+          <span class="pull-left" >08-26 10:21:45</span>
+          <span class="pull-right" >$20808.52</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-list">
+          <img src="https://gw.alipayobjects.com/zos/rmsportal/qiLZGCOsEjGxgNiifgVn.png" alt="">
+          <span class="pull-left" style="color: #fff;">Sell Record</span>
+          <span class="pull-right" style="color: #C95B6C;">-1,000.00</span>
+        </div>
+        <div class="small-card-list">
+          <span class="pull-left" >08-25 19:30:25</span>
+          <span class="pull-right" >$10808.52</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-list">
+          <img src="https://gw.alipayobjects.com/zos/rmsportal/WwUHCeJJeOLpfonuTRot.png" alt="">
+          <span class="pull-left" style="color: #fff;">Dividend</span>
+          <span class="pull-right" style="color: #86ACFF;">+15.08</span>
+        </div>
+        <div class="small-card-list">
+          <span class="pull-left" >08-25 08:30:25</span>
+          <span class="pull-right" >$10808.52</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-wrapper" style="margin-top: -600px!important;left: 180.5px;z-index: 1;">
+    <div class="mobile-header">
+      <div class="status-bar"></div>
+      <div class="menu">
+        <div><i class="iconfont icon-menu" style="font-size: 24px;color:#fff;font-weight: bold;"></i></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="demo f2" style="position: relative;">
+        <div style="padding: 30px 15px 0;">
+          <p style="margin: 0;font-size: 20px;text-align: left;color:#fff;">TREASURE</p>
+        </div>
+        <div class="status-container">
+          <p style="line-height: 1;margin: 0;margin-top: -10px;text-align: left;">
+            <span style="font-size: 18px;">xx 行业基金名称</span>
+            <span style="font-size: 11px;font-weight: 300;">001938</span>
+          </p>
+          <div class="flex" style="margin-bottom: 4px;margin-top: 30px;">
+            <div class="auxiliary-font" style="width: 40%">最近净值(04-18)</div>
+            <div class="auxiliary-font" style="width: 30%">日涨幅</div>
+          </div>
+          <div class="flex" style="margin-bottom: 15px;position: relative;">
+            <div class="main-font" style="width: 40%">1.2380</div>
+            <div class="main-font" style="width: 30%">2.98%</div>
+            <span style="position: absolute;color: #6C57FF;font-size:20px;width: 55px;text-align:center;border-radius: 22.5px;background-color: #fff;display: inline-block;vertical-align: middle;right: 0;bottom: 5px;">BUY</span>
+          </div>
+        </div>
+        <div style="padding: 0 15px;font-size: 14px;color: #989DAE;text-align: left;margin: 30px 0 10px;">Fortune</div>
+        <canvas id="chart3" style="width: 100%;height: 160px;"></canvas>
+      </div>
+
+      <div style="padding: 0 15px 20px;font-size: 14px;color: #989DAE;text-align: left;border-bottom: 1px solid #333C5B;">Returns Detailed</div>
+      <div class="flex" style="margin-top: 25px;">
+        <div style="width: 33.333%;font-size: 20px;color: #DADCE1;border-right: 1px solid #333c5b;">+23.05</div>
+        <div style="width: 33.333%;font-size: 20px;color: #DADCE1;border-right: 1px solid #333c5b;">+66.12</div>
+        <div style="width: 33.333%;font-size: 20px;color: #DADCE1;border-right: 1px solid #333c5b;">+6.63</div>
+      </div>
+      <div class="flex" style="margin-bottom: 25px;position: relative;">
+        <div style="width: 33.333%;color:#878C9E;font-size: 12px;border-right: 1px solid #333c5b;">Funds</div>
+        <div style="width: 33.333%;color:#878C9E;font-size: 12px;border-right: 1px solid #333c5b;">Fixed Term</div>
+        <div style="width: 33.333%;color:#878C9E;font-size: 12px;border-right: 1px solid #333c5b;">Stock</div>
+      </div>
+    </div>
+  </div>
+</section>

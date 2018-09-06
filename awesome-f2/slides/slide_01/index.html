@@ -1,0 +1,183 @@
+<style>
+@font-face {
+  font-family: 'iconfont'; /* project id 822144 */
+  src: url('//at.alicdn.com/t/font_822144_ddpcvrp16a4.eot');
+  src: url('//at.alicdn.com/t/font_822144_ddpcvrp16a4.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_822144_ddpcvrp16a4.woff') format('woff'),
+  url('//at.alicdn.com/t/font_822144_ddpcvrp16a4.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_822144_ddpcvrp16a4.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-1112daochashao:before { content: "\ec2e"; }
+.icon-salary:before { content: "\e653"; }
+.icon-flight:before { content: "\e6ad"; }
+.icon-qiandai3:before { content: "\e613"; }
+.icon-calendar:before { content: "\e7b0"; }
+.icon-menu:before { content: "\e61b"; }
+
+/* .slide-background {
+  background-color: #1E1D76!important;
+} */
+#slide_01 .mobile-header {
+  height: 20px;
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/ktiXGQxPkDtKHdajdFoE.png);
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#slide_01 .mobile-wrapper {
+  pointer-events: auto;
+  position: relative;
+  width: 414px;
+  height: 736px;
+  margin: 0 auto!important;
+  background-color: #292787;
+  border-radius: 8px;
+  overflow: hidden;
+  /* border: 1px solid #fff!important; */
+}
+#slide_01 .mobile-wrapper .content {
+  height: 716px;
+}
+#slide_01 .mobile-wrapper .header {
+  clear: both;
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#slide_01 .mobile-wrapper .header .iconfont {
+  font-size: 20px;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: -15px!important;
+}
+.stats div {
+  text-align: center;
+  width: 33.333%;
+}
+.stats span:nth-child(1) {
+  font-size: 12px;
+  color: #9E9EF9;
+}
+.stats span:nth-child(2) {
+  font-size: 32px;
+  display: block;
+  position: relative;
+  padding-left: 60px;
+  text-align: left;
+  line-height: 1;
+  margin-top: -5px;
+}
+.stats span:nth-child(2)::before {
+  position: absolute;
+  display: inline;
+  content: '$';
+  left: 40px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px!important;
+  font-size: 20px!important;
+  vertical-align: middle!important;
+  line-height: 44px!important;
+  height: 44px!important;
+}
+.list div:nth-child(1) {
+  font-size: 16px;
+  line-height: 1;
+  margin: 10px;
+  text-align: left;
+  margin-top: 5px;
+  position: relative;
+  padding-left: 50px;
+  color: #212121;
+  position: relative;
+}
+
+.list div:nth-child(1) i {
+  position: absolute;
+  font-size: 28px;
+  left: 0;
+  top: 2px;
+  color: #9797A6;
+}
+
+</style>
+<section id="slide_01" data-background-color="#1E1D76">
+  <div class="mobile-wrapper">
+    <div class="mobile-header"></div>
+    <div class="content">
+      <!-- <div class="content-header">
+        wallet
+      </div> -->
+      <div class="header">
+        <span class="pull-left"><i class="iconfont icon-menu"></i></span>
+        <span class="title">Wallet</span>
+        <span class="pull-right"><i class="iconfont icon-calendar"></i></span>
+      </div>
+      <div class="demo f2">
+        <div style="text-align: center">
+          <div style="font-size: 12px;color: #9E9EF9">OVERVIEW</div>
+          <div style="font-size: 60px;line-height: 60px;">$ <span id="overview">0</span></div>
+        </div>
+        <div class="stats">
+          <div><span>INCOME</span><span id="income">0</span></div>
+          <div><span>EXPENSE</span> <span id="expense">0</span></div>
+          <div><span>BALANCE</span> <span id="balance" style="color: #2BD5C7">0</span></div>
+        </div>
+        <canvas id="mountNode" style="width: 100%;height: 265px;"></canvas>
+      </div>
+      <div class="list" style="background-color: #FFFFFF;border-bottom: 1px solid #E9E9F0;">
+        <div>
+          Salary
+          <i class="iconfont icon-salary"></i>
+          <p style="font-size: 14px;margin: 0;line-height: 1;margin-top: 5px;color: #9797A6;">20/01/2016</p>
+        </div>
+        <div style="color: #13C99C">$800</div>
+      </div>
+      <div class="list" style="background-color: #F6F5F8;border-bottom: 1px solid #E9E9F0;">
+        <div>
+          Fly to Paris
+          <i class="iconfont icon-flight"></i>
+          <p style="font-size: 14px;margin: 0;line-height: 1;margin-top: 5px;color: #9797A6;">19/01/2016</p>
+        </div>
+        <div style="color: #E92922">$500</div>
+      </div>
+      <div class="list" style="background-color: #fff;border-bottom: 1px solid #E9E9F0;">
+        <div>
+          Groceries
+          <i class="iconfont icon-1112daochashao"></i>
+          <p style="font-size: 14px;margin: 0;line-height: 1;margin-top: 5px;color: #9797A6;">16/01/2016</p>
+        </div>
+        <div style="color: #E92922">$43</div>
+      </div>
+      <div class="list" style="background-color: #F6F5F8">
+        <div>
+          Garage sale
+          <i class="iconfont icon-qiandai3"></i>
+          <p style="font-size: 14px;margin: 0;line-height: 1;margin-top: 5px;color: #9797A6;">12/01/2016</p>
+        </div>
+        <div style="color: #13C99C">$79</div>
+      </div>
+    </div>
+  </div>
+</section>
