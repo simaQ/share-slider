@@ -148,56 +148,46 @@ function drawRadial() {
     });
   });
   chart.render();
-
-  const updateData=function(){
-    for(let i=0;i<data.length;++i) {
-      data[i].percent = Math.floor((Math.random() * 60) + 20);
-    }
-    chart.changeData(data);
-    setTimeout(updateData,1500);
-  };
-
-  setTimeout(updateData,1500);
   return chart;
 }
 
 function drawBar() {
   var Animate = F2.Animate;
-var Util = F2.Util;
-var G = F2.G;
-Animate.registerAnimation('delayScaleInY', function(shape, animateCfg) {
-  var box = shape.getBBox();
-  var origin = shape.get('origin');
-  var points = origin.points; // 获取柱子顶点
-  var centerX = (box.minX + box.maxX) / 2;
-  var centerY;
-  if (points[0].y - points[1].y <= 0) {
-    // 当顶点在零点之下
-    centerY = box.maxY;
-  } else {
-    centerY = box.minY;
-  }
+  var Util = F2.Util;
+  var G = F2.G;
+  Animate.registerAnimation('delayScaleInY', function(shape, animateCfg) {
+    var box = shape.getBBox();
+    var origin = shape.get('origin');
+    var points = origin.points; // 获取柱子顶点
+    var centerX = (box.minX + box.maxX) / 2;
+    var centerY;
+    if (points[0].y - points[1].y <= 0) {
+      // 当顶点在零点之下
+      centerY = box.maxY;
+    } else {
+      centerY = box.minY;
+    }
 
-  shape.transform([['t', centerX, centerY], ['s', 1, 0.1], ['t', -centerX, -centerY]]);
-  var index = shape.get('index');
-  var delay = animateCfg.delay;
-  if (Util.isFunction(delay)) {
-    delay = animateCfg.delay(index);
-  }
-  var easing = animateCfg.easing;
+    shape.transform([['t', centerX, centerY], ['s', 1, 0.1], ['t', -centerX, -centerY]]);
+    var index = shape.get('index');
+    var delay = animateCfg.delay;
+    if (Util.isFunction(delay)) {
+      delay = animateCfg.delay(index);
+    }
+    var easing = animateCfg.easing;
 
-  var matrix = shape.getMatrix();
-  var endMatrix = G.Matrix.transform(matrix, [['t', centerX, centerY], ['s', 1, 10], ['t', -centerX, -centerY]]);
+    var matrix = shape.getMatrix();
+    var endMatrix = G.Matrix.transform(matrix, [['t', centerX, centerY], ['s', 1, 10], ['t', -centerX, -centerY]]);
 
-  shape.animate().to({
-    attrs: {
-      matrix: endMatrix
-    },
-    delay: delay,
-    easing: easing,
-    duration: animateCfg.duration
+    shape.animate().to({
+      attrs: {
+        matrix: endMatrix
+      },
+      delay: delay,
+      easing: easing,
+      duration: animateCfg.duration
+    });
   });
-});
   const data = [
     { date: '2018-05-06', steps: 19461 },
     { date: '2018-05-07', steps: 22487 },
@@ -241,7 +231,7 @@ Animate.registerAnimation('delayScaleInY', function(shape, animateCfg) {
       appear: {
         animation: 'delayScaleInY',
         easing: 'elasticOut',
-        duration: 1000,
+        duration: 1500,
         delay: function delay(index) {
           return index * 50;
         }
@@ -324,7 +314,7 @@ function drawLine() {
     .shape('smooth')
     .animate({
       appear: {
-        duration: 1000
+        duration: 1500
       }
     });
   chart.render();

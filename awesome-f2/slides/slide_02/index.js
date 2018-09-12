@@ -62,7 +62,6 @@ function drawLineChart() {
       .size(4)
       .animate({
         appear: {
-          // duration: 1100,
           animation(shape, animateCfg, coord) {
             const start = coord.start;
             const end = coord.end;
@@ -84,7 +83,8 @@ function drawLineChart() {
             };
             clip.attr('width', 0);
             clip.animate().to({
-              attrs: endState
+              attrs: endState,
+              duration: 1200
             }).onEnd(() => {
               shape.attr('clip', null);
               clip.remove(true);
@@ -278,6 +278,7 @@ function drawPieChart() {
     .adjust('stack')
     .animate({
       appear: {
+        duration: 1200,
         animation(shape) {
           const { startAngle, endAngle } = shape.attr();
           shape.attr('endAngle', startAngle);

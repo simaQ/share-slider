@@ -70,6 +70,11 @@ function drawBarChart() {
   .color('l(0) 0:#FB8F92 1:#FBCE8B')
   .style({
     radius: 4
+  })
+  .animate({
+    appear: {
+      duration: 1200
+    }
   });
 
   chart.render();
@@ -237,7 +242,12 @@ function drawGaugeChart() {
   });
   chart.point().position('value*y')
     .size('length')
-    .shape('dashBoard');
+    .shape('dashBoard')
+    .animate({
+      appear: {
+        duration: 1200
+      }
+    });
   chart.render();
   return chart;
 }
@@ -288,7 +298,11 @@ function drawAreaChart() {
     }
   });
 
-  chart.line().position('day*value').shape('smooth').color('#2D2F45');
+  chart.line().position('day*value').shape('smooth').color('#2D2F45').animate({
+    appear: {
+      duration: 1200
+    }
+  });
 
   chart.guide().regionFilter({
     start: ['last-Sun', 'min'],
@@ -367,6 +381,11 @@ function drawMilestoneChart() {
     .color('brand', ['#F9E3E1', '#FFD3C4', '#F29897' ])
     .style({
       radius: 2
+    })
+    .animate({
+      appear: {
+        duration: 1200
+      }
     });
   chart.guide().text({
     position: ['max', 0],
@@ -443,6 +462,11 @@ function drawDodgeBar() {
     .adjust({
       type: 'dodge',
       marginRatio: 0.005
+    })
+    .animate({
+      appear: {
+        duration: 1200
+      }
     });
   chart.render();
   return chart;
@@ -627,8 +651,16 @@ function drawMultLineChart() {
       },
       offsetY: -35,
     });
-    chart.area().position('year*value').color('country', [ '#FB8482', '#DCDCDB' ]).shape('smooth');
-    chart.line().position('year*value').color('country', ['#FB8482', '#DCDCDB']).shape('smooth');
+    chart.area().position('year*value').color('country', [ '#FB8482', '#DCDCDB' ]).shape('smooth').animate({
+      appear: {
+        duration: 1200
+      }
+    });
+    chart.line().position('year*value').color('country', ['#FB8482', '#DCDCDB']).shape('smooth').animate({
+      appear: {
+        duration: 1200
+      }
+    });
     chart.render();
 
   return chart;

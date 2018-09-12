@@ -19,24 +19,29 @@
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			document.getElementsByTagName('head')[0].appendChild( link );
 		</script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-        <section id="before-starting" data-markdown>
+        <section data-transition="fade" id="before-starting" data-markdown>
           <script type="text/template">
           # F2，为移动而生
           ---
           一个专注于移动，开箱即用的可视化解决方案
           </script>
         </section>
-        <section data-external="slides/slide_01/index.html"></section>
+        <section data-external="slides/slide_00/index.html"></section>
+        <section data-transition="fade-in convex-out" data-external="slides/slide_001/index.html"></section>
+        <section data-transition="convex" data-external="slides/slide_01/index.html"></section>
         <section data-external="slides/slide_02/index.html"></section>
-        <section data-external="slides/slide_03/index.html"></section>
-        <section data-external="slides/slide_04/index.html"></section>
-        <section data-external="slides/contact.html"></section>
+        <section data-transition="zoom" data-external="slides/slide_003/index.html"></section>
+        <section data-transition="convex" data-external="slides/slide_0003/index.html"></section>
+        <section data-transition="convex-in zoom-out" data-external="slides/slide_03/index.html"></section>
+        <section data-external="slides/slide_004/index.html"></section>
+        <section data-transition="zoom" data-external="slides/slide_04/index.html"></section>
+        <section data-transition="fade" data-external="slides/contact.html"></section>
 			</div>
 		</div>
 
@@ -49,8 +54,10 @@
 
 		<!-- In slides -->
 		<script src="slides/slide_01/index.js"></script>
+		<script src="slides/slide_001/index.js"></script>
 		<script src="slides/slide_02/index.js"></script>
 		<script src="slides/slide_03/index.js"></script>
+		<script src="slides/slide_0003/index.js"></script>
 		<script src="slides/slide_04/index.js"></script>
 		<script>
 			// More info about config & dependencies:
@@ -62,7 +69,8 @@
 				history: true,
 				center: true,
 				width: '100%',
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transitionSpeed: 'slow',
 				dependencies: [
 				  { src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
