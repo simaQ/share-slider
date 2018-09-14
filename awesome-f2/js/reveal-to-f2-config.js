@@ -15,22 +15,33 @@ pt.slideIdToFunctions = {
   },
   'slide_02': {
     'init': function () {
-      pt.smoothLine.init();
+      setTimeout(() => {
+        pt.smoothLine.init();
+      }, 800);
     }
   },
   'slide_03': {
     'init': function () {
-      pt.ipadDashboard.init();
+      // pt.ipadDashboard.init();
+      setTimeout(() => {
+        pt.ipadDashboard.init();
+      }, 1000);
     }
   },
   'slide0003': {
     'init': function () {
-      pt.charts.init();
+      // pt.charts.init();
+      setTimeout(() => {
+        pt.charts.init();
+      }, 1000);
     }
   },
   'slide_04': {
     'init': function () {
-      pt.iwatch.init();
+      // pt.iwatch.init();
+      setTimeout(() => {
+        pt.iwatch.init();
+      }, 800);
     }
   },
 };

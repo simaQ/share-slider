@@ -86,7 +86,7 @@ function drawColumn003() {
     .size(20)
     .animate({
       appear: {
-        duration: 800
+        duration: 1500
       }
     });
   chart.render();
@@ -198,7 +198,7 @@ function drawLine003() {
     })
     .animate({
       appear: {
-        duration: 800
+        duration: 1500
       }
     });
   chart.line()
@@ -206,7 +206,7 @@ function drawLine003() {
     .color('#5DCECC')
     .animate({
       appear: {
-        duration: 800
+        duration: 1500
       }
     });
 
@@ -390,7 +390,7 @@ function drawArea003() {
     })
     .animate({
       appear: {
-        duration: 800
+        duration: 1500
       }
     });
   chart.line()
@@ -399,7 +399,7 @@ function drawArea003() {
     .adjust('stack')
     .animate({
       appear: {
-        duration: 800
+        duration: 1500
       }
     });
   chart.render();
@@ -448,7 +448,7 @@ function drawPie003() {
     .adjust('stack')
     .animate({
       appear: {
-        duration: 800
+        duration: 1500
       }
     })
     .style({
@@ -708,13 +708,13 @@ function drawRadar003() {
   chart.line().position('item*score').color('#5DCECC').size(1).animate({
     appear: {
       animation: 'groupWaveIn',
-      duration: 800
+      duration: 1500
     }
   });
   chart.point().position('item*score').color('#5DCECC').animate({
     appear: {
       delay: 300,
-      duration: 800
+      duration: 1500
     }
   });
 
@@ -790,7 +790,7 @@ function drawStackColumn003() {
     .adjust('stack')
     .animate({
       appear: {
-        duration: 800
+        duration: 1500
       }
     });
 
@@ -874,7 +874,7 @@ function drawRadial003() {
     // .shape('tick')
     .animate({
       appear: {
-        duration: 800,
+        duration: 1500,
         easing: 'cubicIn',
         animation: function (shape, animateCfg) {
           const startAngle = shape.attr('startAngle');
@@ -921,7 +921,7 @@ function drawDodge003() {
   chart.interval().position('brand*const').color('#1D1D29').size(8).animate(false);
   chart.interval().position('brand*sales').color('#5FCDCC').size(8).animate({
     appear: {
-      duration: 800
+      duration: 1500
     }
   });
 

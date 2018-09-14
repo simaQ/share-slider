@@ -60,7 +60,7 @@ pt.fullpageLine.init = function () {
           clip.attr('width', 0);
           clip.animate().to({
             attrs: endState,
-            duration: 1100,
+            duration: 1500,
             // delay,
             // easing
           }).onEnd(() => {

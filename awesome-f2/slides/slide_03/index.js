@@ -73,7 +73,7 @@ function drawBarChart() {
   })
   .animate({
     appear: {
-      duration: 1200
+      duration: 1500
     }
   });
 
@@ -245,7 +245,7 @@ function drawGaugeChart() {
     .shape('dashBoard')
     .animate({
       appear: {
-        duration: 1200
+        duration: 1500
       }
     });
   chart.render();
@@ -300,7 +300,7 @@ function drawAreaChart() {
 
   chart.line().position('day*value').shape('smooth').color('#2D2F45').animate({
     appear: {
-      duration: 1200
+      duration: 1500
     }
   });
 
@@ -384,7 +384,7 @@ function drawMilestoneChart() {
     })
     .animate({
       appear: {
-        duration: 1200
+        duration: 1500
       }
     });
   chart.guide().text({
@@ -465,7 +465,7 @@ function drawDodgeBar() {
     })
     .animate({
       appear: {
-        duration: 1200
+        duration: 1500
       }
     });
   chart.render();
@@ -653,12 +653,12 @@ function drawMultLineChart() {
     });
     chart.area().position('year*value').color('country', [ '#FB8482', '#DCDCDB' ]).shape('smooth').animate({
       appear: {
-        duration: 1200
+        duration: 1500
       }
     });
     chart.line().position('year*value').color('country', ['#FB8482', '#DCDCDB']).shape('smooth').animate({
       appear: {
-        duration: 1200
+        duration: 1500
       }
     });
     chart.render();

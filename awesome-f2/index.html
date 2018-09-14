@@ -25,12 +25,8 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-        <section data-transition="fade" id="before-starting" data-markdown>
-          <script type="text/template">
-          # F2，为移动而生
-          ---
-          一个专注于移动，开箱即用的可视化解决方案
-          </script>
+        <section data-transition="fade" id="before-starting" data-background-color="#03091D">
+          <img src="https://gw.alipayobjects.com/zos/rmsportal/LCnBcjaWXeOBiXdXtxoS.png" style="width:500px;">
         </section>
         <section data-external="slides/slide_00/index.html"></section>
         <section data-transition="fade-in convex-out" data-external="slides/slide_001/index.html"></section>
@@ -64,10 +60,12 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				controls: true,
-				progress: true,
+				controls: false,
+				progress: false,
 				history: true,
-				center: true,
+        center: true,
+        autoSlide: 3800,
+        loop: true,
 				width: '100%',
         transition: 'slide', // none/fade/slide/convex/concave/zoom
         transitionSpeed: 'slow',

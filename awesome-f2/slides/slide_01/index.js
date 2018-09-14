@@ -73,7 +73,7 @@ pt.line.init = function () {
           clip.attr('width', 0);
           clip.animate().to({
             attrs: endState,
-            duration: 1100,
+            duration: 1200,
             // delay,
             // easing
           }).onEnd(() => {
