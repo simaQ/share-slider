@@ -1,6 +1,9 @@
 pt.line = pt.line || {};
 pt.line.init = function () {
   var self = this;
+  self.chart0000 = drawFullLine();
+
+
   var data = [
     { day: 'last-Sun', value: 250 },
     { day: 'Mon', value: 300 },
@@ -92,8 +95,8 @@ pt.line.init = function () {
     'guide-point': {
       appear: {
         animation: 'fadeIn',
-        duration: 400,
-        delay: 1100
+        duration: 1200,
+        // delay: 1100
       }
     },
     'guide-line': {
@@ -106,8 +109,8 @@ pt.line.init = function () {
             attrs: {
               y2: y2
             },
-            delay: 1100,
-            duration: 400
+            // delay: 1100,
+            duration: 1200
           }).onEnd(() => {
             line.style({
               shadowBlur: 10,
@@ -141,14 +144,92 @@ pt.line.init = function () {
       });
     }
   });
-  // setTimeout(() => {
+  setTimeout(() => {
     chart.render();
-  // }, 400);
+    $('#halfLine').addClass('animated fadeOut');
+  }, 800);
 
 
   self.chart = chart;
+
 };
 
 pt.line.destroy = function () {
   this.chart && !this.chart.destroyed && this.chart.destroy();
+  this.chart0000 && !this.chart0000.destroyed && this.chart0000.destroy();
+}
+
+function drawFullLine() {
+  var data = [
+    { day: 'last-Sun', value: 250 },
+    { day: 'Mon', value: 300 },
+    { day: 'Tue', value: 400 },
+    // { day: 'Wed', value: 80 },
+    // { day: 'Thu', value: 500 },
+    // { day: 'Fri', value: 490 },
+    { day: 'Sat', value: 900 },
+    { day: 'Sun', value: 850 },
+    { day: 'next-Mon', value: 820 },
+  ];
+  var chart = new F2.Chart({
+    id: 'halfLine',
+    padding: ['auto', 0],
+    pixelRatio: window.devicePixelRatio
+  });
+
+  chart.source(data, {
+    value: {
+      tickCount: 5,
+      min: 0
+    },
+    day: {
+      range: [0, 1],
+    }
+  });
+  chart.tooltip(false);
+  chart.axis(false);
+
+  const line = chart.line()
+    .position('day*value')
+    .shape('smooth')
+    .size(8)
+    .color('#F0D70A')
+    .animate({
+      appear: {
+        // duration: 1100,
+        animation(shape, animateCfg, coord) {
+          const start = coord.start;
+          const end = coord.end;
+          const width = end.x - start.x;
+          const height = Math.abs(end.y - start.y);
+          const clip = new F2.G.Shape.Rect({
+            attrs: {
+              x: start.x,
+              y: end.y,
+              width,
+              height
+            }
+          });
+          clip.isClip = true;
+          clip.set('canvas', shape.get('canvas'));
+          shape.attr('clip', clip);
+          const endState = {
+            width
+          };
+          clip.attr('width', 0);
+          clip.animate().to({
+            attrs: endState,
+            duration: 800,
+            // delay,
+            // easing
+          }).onEnd(() => {
+            shape.attr('clip', null);
+            clip.remove(true);
+          })
+        }
+      }
+    });
+
+  chart.render();
+  return chart;
 }

@@ -25,7 +25,7 @@
     left: -142px;
     top: 20px;
   }
-  div.image-overview {
+  /* div.image-overview {
     width: 1440px;
     height: 826px;
     background-image: url(https://gw.alipayobjects.com/zos/rmsportal/gkPeTszgnJKUPXNbtvBs.jpg);
@@ -33,7 +33,7 @@
     background-position: center;
     margin-left: -29px;
     margin-top: -64px;
-  }
+  } */
   div.chart-content {
     position: relative;
     margin: 0 auto;
@@ -42,13 +42,14 @@
     background-color: #fff;
   }
   div.charts {
+    opacity: 0.96;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 880px;
     height: 260px;
     margin-left: -440px;
-    margin-top: -130px;
+    margin-top: -90px;
     display: flex;
     justify-content: space-between;
     /* padding: 70px 0; */
@@ -69,9 +70,19 @@
   div.chart-main {
     margin-top: 10px;
   }
+  #myVideo1 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
 </style>
 
 <section id="slide_04" data-background-color="#1A1A1A">
+      <video autoplay muted loop id="myVideo1">
+        <source src="../../img/run-cut1.mp4" type="video/mp4">
+      </video>
   <div class="main">
     <div class="charts">
       <div class="chart-container">
@@ -99,7 +110,7 @@
         </div>
       </div>
     </div>
-    <div class="image-overview"></div>
+    <!-- <div class="image-overview"></div> -->
     <!-- <div class="chart-content"> -->
       <!-- <div class="gif-container">
         <img src="https://gw.alipayobjects.com/zos/rmsportal/UflmkAeCdDvJtDbCxuda.gif" alt="">

@@ -1,6 +1,98 @@
 <style>
+  h1.title {
+    font-size: 64px;
+    margin-bottom: 24px;
+    color: #A282FF;
+
+  }
+  p.sub-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  div.main-content {
+    text-align: left;
+    width: auto;
+    margin-left: 80px;
+    margin-top: 0;
+  }
+  section.mobile {
+    position: relative;
+  }
+  div.iphone-symbol {
+    position: absolute;
+    width: 276px;
+    height: 545px;
+    right: 120px;
+    top: -105px;
+    background-image: url(../../img/iphone.png);
+    background-size: cover;
+  }
+
+  div.iphone-area {
+    position: absolute;
+    width: 228px;
+    height: 190px;
+    background-image: url(../../img/iphone-area.png);
+    background-size: cover;
+    top: 45px;
+    left: 24px;
+  }
+
+  div.iphone-line {
+    position: absolute;
+    width: 227px;
+    height: 40px;
+    background-image: url(../../img/iphone-line.png);
+    background-size: cover;
+    left: 24px;
+  }
+
+  div.iphone-line.iphone-line0 {
+    top: 260px;
+  }
+  div.iphone-line.iphone-line1 {
+    top: 330px;
+  }
+  div.iphone-line.iphone-line2 {
+    top: 400px;
+  }
+
+  div.iphone-line.iphone-line3 {
+    top: 470px;
+  }
+
+  .delay-25s {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes iphone-width {
+    from {
+      width: 0;
+    }
+    to {
+      width: 228px;
+    }
+  }
+  .iphone-width {
+    /* animation-duration: 1s;  */
+    animation-name: iphone-width;
+  }
 </style>
 
-<section id="mobile" data-background-color="#FFF">
-<img src="https://gw.alipayobjects.com/zos/rmsportal/qnkzjvGPWdPXgBoFQWSQ.gif">
+<section id="mobile" data-background-color="#0C112E">
+  <!-- <img style="position:fixed;right:40px;bottom:45px;width:73px;" src="../../img/antv.png" alt=""> -->
+  <div class="main-content animated fadeInLeftBig delay-2s fast">
+    <h1 class="title">For Mobile</h1>
+    <p class="sub-title">电子钱包、金融、监控等可视化方案</p>
+    <p style="font-size:16px;opacity: 0.45;">随时随地掌控一切，提升数据阅读体验。</p>
+  </div>
+
+  <div class="iphone-symbol animated fadeInDownBig delay-2s fast">
+    <div class="iphone-area animated iphone-width delay-25s fast"></div>
+    <div class="iphone-line iphone-line0 animated fadeInUp delay-25s fast"></div>
+    <div class="iphone-line iphone-line1 animated fadeInUp delay-25s fast"></div>
+    <div class="iphone-line iphone-line2 animated fadeInUp delay-25s fast"></div>
+    <div class="iphone-line iphone-line3 animated fadeInUp delay-25s fast"></div>
+  </div>
 </section>

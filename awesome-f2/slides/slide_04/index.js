@@ -120,11 +120,11 @@ function drawRadial() {
     .animate({
       appear: {
         animation: 'waveIn',
-        duration: 1500,
+        duration: 1200,
         easing: 'elasticOut'
       },
       update: {
-        duration: 1500,
+        duration: 1200,
         easing: 'elasticOut'
       }
     });
@@ -231,7 +231,7 @@ function drawBar() {
       appear: {
         animation: 'delayScaleInY',
         easing: 'elasticOut',
-        duration: 1500,
+        duration: 1200,
         delay: function delay(index) {
           return index * 50;
         }
@@ -314,7 +314,7 @@ function drawLine() {
     .shape('smooth')
     .animate({
       appear: {
-        duration: 1500
+        duration: 1200
       }
     });
   chart.render();

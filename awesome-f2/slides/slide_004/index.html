@@ -1,3 +1,72 @@
-<section data-background-color="#fff">
-  <img src="https://gw.alipayobjects.com/zos/rmsportal/cwqxAeEhRhHgRcWKspFE.gif" alt="">
+<style>
+  h1.title {
+    font-size: 64px;
+    margin-bottom: 24px;
+    color: #A282FF;
+  }
+
+  p.sub-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  div.main-content-2 {
+    text-align: left;
+    width: auto;
+    margin-left: 80px;
+    margin-top: 0;
+  }
+
+  section.mobile {
+    position: relative;
+  }
+
+  div.hand-symbol {
+    width: 242px;
+    height: 447px;
+    position: absolute;
+    right: 120px;
+    top: -120px;
+    background-image: url(../../img/hand.png);
+    background-size: cover;
+  }
+
+  div.hand-area {
+    position: absolute;
+    width: 182px;
+    height: 189px;
+    background-image: url(../../img/hand-area.png);
+    background-size: cover;
+    top: 125px;
+    left: 24px;
+  }
+
+  @keyframes hand-width {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 182px;
+    }
+  }
+
+  .hand-width {
+    /* animation-duration: 1s;  */
+    animation-name: hand-width;
+  }
+</style>
+
+<section id="hand" data-background-color="#0C112E">
+  <!-- <img style="position:fixed;right:40px;bottom:45px;width:73px;" src="../../img/antv.png" alt=""> -->
+
+  <div class="main-content-2 animated fadeInLeftBig delay-2s fast">
+    <h1 class="title">For Wearable Device</h1>
+    <p class="sub-title">运动、健康、医疗等可视化方案</p>
+    <p style="font-size:16px;opacity: 0.45;">随时随地掌控一切，提升数据阅读体验。</p>
+  </div>
+
+  <div class="hand-symbol animated fadeInDownBig delay-2s fast">
+    <div class="hand-area animated hand-width delay-25s fast"></div>
+  </div>
 </section>

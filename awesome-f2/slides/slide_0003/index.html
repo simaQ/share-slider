@@ -17,22 +17,49 @@ div.flex-div canvas {
 
 div.surface-wrapper {
   /* width: 1440px; */
+  opacity: 0.96;
+  position: relative;
   height: 600px;
-  margin-top: -31px;
+  /* margin-top: -10px; */
   padding: 80px;
-  background-color: #21212B;
-  border-radius: 32px;
+    margin: 0 40px;
+    background-color: #21212B;
+    border-radius: 32px;
+    transform: scale(0.8);
+    border: 1px solid rgba(255,255,255, .45);
 }
 
 div.surface-content {
   padding: 20px;
   height: 560px;
-  background-color: #212233;
+  background-color: #191A1A;
 }
+div.point {
+      position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 35px;
+    background: rgba(255,255,255,0.45);
+    left: 50%;
+    margin-left: -5px;
+}
+  #myVideo2 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(1.05);
+  }
 </style>
 
-<section id="slide0003" data-background-color="#272D43">
+<section id="slide0003" data-background-color="#191A1A">
+            <video autoplay muted loop id="myVideo2">
+              <source src="../../img/coffee-cut1.mov" type="video/mp4">
+            </video>
   <div class="surface-wrapper">
+    <div class="point"></div>
     <div class="surface-content">
       <div class="flex-div">
         <div>

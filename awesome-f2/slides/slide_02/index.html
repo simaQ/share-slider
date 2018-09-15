@@ -33,6 +33,7 @@
   background-color: #283151;
   border-radius: 0;
   overflow: hidden;
+  transform: scale(0.9);
 }
 #slide_02 .mobile-wrapper .content {
   height: 647px;
@@ -207,10 +208,20 @@ div.status-container {
   margin: 15px;
   border-radius: 8px;
 }
-
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(1.05);
+  }
 </style>
 <section id="slide_02" data-background-color="#8e8baf">
-  <div class="mobile-wrapper" style="margin-top: -50px;left: -187.5px;z-index: 10;">
+        <video autoplay muted loop id="myVideo">
+          <source src="../../img/office-cut.mov" type="video/mp4">
+        </video>
+  <div class="mobile-wrapper" style="margin-top: -50px;left: -187.5px;z-index: 10;opacity: 0.96;">
     <div class="mobile-header">
       <div class="status-bar"></div>
       <div class="menu">

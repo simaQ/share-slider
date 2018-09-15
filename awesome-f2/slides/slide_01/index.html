@@ -41,6 +41,7 @@
   background-color: #292787;
   border-radius: 8px;
   overflow: hidden;
+  top: 32px;
   /* border: 1px solid #fff!important; */
 }
 #slide_01 .mobile-wrapper .content {
@@ -120,9 +121,27 @@
   top: 2px;
   color: #9797A6;
 }
+div.halfLineContainer {
+  position: absolute;
+  left: 0;
+  width: 514px;
+  height: 800px;
+  top: 0;
+}
+canvas#halfLine {
+  position: absolute;
+  /* left: 0; */
+  right: 0;
+  width: 100%;
+  top: 376px;
+}
 </style>
 <section id="slide_01" data-background-color="#1E1D76">
-  <div class="mobile-wrapper">
+  <div class="halfLineContainer">
+  <canvas id="halfLine"></canvas>
+
+  </div>
+  <div class="mobile-wrapper animated fadeInRight">
     <div class="mobile-header"></div>
     <div class="content">
       <!-- <div class="content-header">

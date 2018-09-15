@@ -1,6 +1,96 @@
 <style>
+  h1.title {
+    font-size: 64px;
+    margin-bottom: 24px;
+    color: #A282FF;
+
+  }
+  p.sub-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  div.main-content-1 {
+    text-align: left;
+    width: auto;
+    margin-left: 80px;
+    margin-top: 0;
+  }
+  section.mobile {
+    position: relative;
+  }
+  div.ipad-symbol {
+    width: 393px;
+    height: 553px;
+    position: absolute;
+    right: 120px;
+    top: -120px;
+    background-image: url(../../img/iPad.png);
+    background-size: cover;
+  }
+  div.ipad-area {
+    position: absolute;
+    width: 307px;
+    height: 189px;
+    background-image: url(../../img/ipad-area.png);
+    background-size: cover;
+    top: 60px;
+    left: 42px;
+  }
+
+  div.ipad-line {
+    position: absolute;
+    width: 307px;
+    height: 40px;
+    background-image: url(../../img/ipad-line0.png);
+    background-size: cover;
+    left: 42px;
+  }
+
+  div.ipad-line.ipad-line0 {
+    top: 265px;
+  }
+  div.ipad-line.ipad-line1 {
+    top: 325px;
+  }
+  div.ipad-line.ipad-line2 {
+    top: 385px;
+  }
+  div.ipad-line.ipad-line3 {
+    top: 445px;
+  }
+
+  @keyframes width {
+    from {
+      width: 0;
+    }
+    to {
+      width: 307px;
+    }
+  }
+  .width {
+    /* animation-duration: 1s;  */
+    animation-name: width;
+  }
+
+  .delay-25s {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
 </style>
 
-<section id="slide_003" data-background-color="#FFF">
-  <img src="https://gw.alipayobjects.com/zos/rmsportal/nIFPRsTDEJIViqMSSbLG.jpg">
+<section id="ipad" data-background-color="#191A1A">
+  <!-- <img style="position:fixed;right:40px;bottom:45px;width:73px;" src="../../img/antv.png" alt=""> -->
+  <div class="main-content-1 animated fadeInLeftBig delay-2s fast">
+    <h1 class="title">For Tablet</h1>
+    <p class="sub-title">BI、数据分析、监控报表等可视化方案</p>
+    <p style="font-size:16px;opacity: 0.45;">随时随地掌控一切，提升数据阅读体验。</p>
+  </div>
+
+  <div class="ipad-symbol animated fadeInDownBig delay-2s fast">
+    <div class="ipad-area animated width delay-25s fast"></div>
+    <div class="ipad-line ipad-line0 animated fadeInUp delay-25s fast"></div>
+    <div class="ipad-line ipad-line1 animated fadeInUp delay-25s fast"></div>
+    <div class="ipad-line ipad-line2 animated fadeInUp delay-25s fast"></div>
+    <div class="ipad-line ipad-line3 animated fadeInUp delay-25s fast"></div>
+  </div>
 </section>

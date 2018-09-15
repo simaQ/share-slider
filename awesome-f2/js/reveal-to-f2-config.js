@@ -25,7 +25,7 @@ pt.slideIdToFunctions = {
       // pt.ipadDashboard.init();
       setTimeout(() => {
         pt.ipadDashboard.init();
-      }, 1000);
+      }, 500);
     }
   },
   'slide0003': {
@@ -33,7 +33,7 @@ pt.slideIdToFunctions = {
       // pt.charts.init();
       setTimeout(() => {
         pt.charts.init();
-      }, 1000);
+      }, 500);
     }
   },
   'slide_04': {
